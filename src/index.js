@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { MapProvider } from './map-context';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MapProvider>
+      <App />
+    </MapProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
